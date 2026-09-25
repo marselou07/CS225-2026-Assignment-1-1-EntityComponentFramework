@@ -12,6 +12,10 @@ ICloneable *Component::clone() const
 
 Entity *Component::get_owner()
 {
+    if(this->entity== nullptr)
+    {
+        return nullptr;
+    }
     return this->entity;
 }
 

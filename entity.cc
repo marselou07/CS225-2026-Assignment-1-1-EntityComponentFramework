@@ -2,6 +2,7 @@
 #include <iterator>
 Entity::~Entity()
 {
+    this->listcomp.clear();
 }
 
 int Entity::component_count()
@@ -31,6 +32,6 @@ void Entity::attach(Component comp)
 Component& Entity::operator[](int position)
 {
     auto nodepos = this->listcomp.begin();
-     std::advance(nodepos,position);
-     return *nodepos;
+
+    
 }
