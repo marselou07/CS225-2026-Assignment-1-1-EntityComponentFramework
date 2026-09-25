@@ -20,16 +20,16 @@ void Component::set_owner(Entity *e)
     this->entity = e;
 }
 
-bool Component::compare_to(Component* comp) const
+bool Component::compare_to(Component comp) const
 {
-    if(comp->id == this->id)
+    if(this->id == comp.id)
     {
         return true;
     }
     return false;
 }
 
-void Component::printf() const
+void Component::print() const
 {
     std::cout << "This is a Component " << this->id;
 }

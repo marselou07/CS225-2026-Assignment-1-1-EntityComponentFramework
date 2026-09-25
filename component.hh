@@ -8,12 +8,12 @@ class ICloneable
 class IComparable
 {
     public:
-    virtual bool compare_to(Component* comp) const =0;
+    virtual bool compare_to(Component comp) const =0;
 };
 class IPrintable
 {
     public:
-    virtual void printf() const = 0;
+    virtual void print() const = 0;
 };
 class Component: public ICloneable, public IComparable, public IPrintable
 {
@@ -25,7 +25,7 @@ class Component: public ICloneable, public IComparable, public IPrintable
         ICloneable* clone() const override;
         Entity * get_owner();
         void set_owner(Entity* e);
-        bool compare_to(Component* comp) const override;
-        void printf() const override;
+        bool compare_to(Component comp) const override;
+        void print() const override;
 
 };
