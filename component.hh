@@ -1,14 +1,17 @@
-#include "entity.hh"
+#ifndef COMPONENT_H
+#define COMPONENT_H
+class Entity;
+class Component;
 class ICloneable
 {
     public:
     virtual ICloneable* clone() const = 0;
-
 };
 class IComparable
 {
     public:
     virtual bool compare_to(Component comp) const =0;
+
 };
 class IPrintable
 {
@@ -21,6 +24,8 @@ class Component: public ICloneable, public IComparable, public IPrintable
         int id;
         Entity * entity;
     public:
+        ~Component() = default;
+        
         int get_id();
         ICloneable* clone() const override;
         Entity * get_owner();
@@ -29,3 +34,4 @@ class Component: public ICloneable, public IComparable, public IPrintable
         void print() const override;
 
 };
+#endif
