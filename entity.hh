@@ -6,12 +6,12 @@
 class Entity
 {
     protected:
-    std::list<Component> listcomp;
+    std::list<Component*> listcomp;
     public:
     ~Entity();
     int component_count();
     void attach(Component * comp);
-    void attach(Component comp);
+    void attach(Component& comp);
     Component& operator[](int position);
 
 };

@@ -22,9 +22,8 @@ class Component: public ICloneable, public IComparable, public IPrintable
 {
     protected:
         int id;
-        Entity * entity;
+        Entity * entity = nullptr;
     public:
-        ~Component() = default;
         
         int get_id();
         ICloneable* clone() const override;
