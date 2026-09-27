@@ -24,7 +24,7 @@ class Component: public ICloneable, public IComparable, public IPrintable
         int id;
         Entity * entity = nullptr;
     public:
-        
+        virtual ~Component() = default;
         int get_id();
         ICloneable* clone() const override;
         Entity * get_owner();

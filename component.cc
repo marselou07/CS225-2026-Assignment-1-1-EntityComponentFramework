@@ -1,5 +1,6 @@
 #include "component.hh"
 #include <iostream>
+
 /******************************************************************************
 filename    component.cpp
 author      Markel Susial de la fuente
@@ -10,11 +11,12 @@ due date    26/09/2026
 
 Brief Description: this program implements the component class which is set up functions.
 ******************************************************************************/
-  /**
-  * Get the id of the component
-  * @param nothing
-  * @return the id of the component.
-  */
+
+/**
+ * Get the id of the component
+ * @param nothing
+ * @return the id of the component.
+ */
 int Component::get_id()
 {
     return this->id;
